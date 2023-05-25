@@ -1,5 +1,5 @@
 #include <SFML/Graphics.hpp>
-#include "Floraft.h"
+#include "Floraft.hpp"
 
 
 int main() {
