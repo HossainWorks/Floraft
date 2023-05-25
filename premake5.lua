@@ -1,12 +1,15 @@
 
- -- The main workflow
+-- The main workflow
 function DefaultProject(name, type)
 	project(name)
 	kind(type)
 	language "C++"
 
 	files { "src/*.cpp", "src/*.h" }
+end
 
+
+function DefaultConfigurations()
 	filter "configurations:Debug"
 		symbols "On"
 		defines { "DEBUG" }
@@ -29,6 +32,6 @@ workspace "FloraftEngine"
 	libdirs { "/usr/lib" }
 
 
- -- Include premake5.lua from Floraft and Sandbox folder
+-- Include premake5.lua from Floraft and Sandbox folder
 include "Floraft"
 include "Sandbox"
