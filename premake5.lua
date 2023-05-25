@@ -6,7 +6,8 @@ function DefaultProject(name, type)
 	language "C++"
 
 	files { "src/*.cpp", "src/*.h" }
-	targetdir "%{wks.location}/Binaries/%{prj.name}%{cfg.platform}-%{cfg.architecture}"
+	targetdir "%{wks.location}/Binaries/Targets/%{prj.name}%{cfg.platform}-%{cfg.architecture}"
+	objdir "%{wks.location}/Binaries/Intermediates/%{prj.name}%{cfg.platform}-%{cfg.architecture}"
 
 
 	filter "configurations:Debug"
