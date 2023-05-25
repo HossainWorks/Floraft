@@ -6,10 +6,9 @@ function DefaultProject(name, type)
 	language "C++"
 
 	files { "src/*.cpp", "src/*.h" }
-end
+	targetdir "%{wks.location}/Binaries/%{prj.name}%{cfg.platform}-%{cfg.architecture}"
 
 
-function DefaultConfigurations()
 	filter "configurations:Debug"
 		symbols "On"
 		defines { "DEBUG" }
@@ -17,6 +16,8 @@ function DefaultConfigurations()
 	filter "configurations:Release"
 		optimize "On"
 		defines { "RELEASE" }
+
+	filter {}
 end
 
 

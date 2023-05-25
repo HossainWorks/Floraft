@@ -37,3 +37,4 @@
 # Exclude all bin and obj folders
 **/bin/
 **/obj/
+Binaries
